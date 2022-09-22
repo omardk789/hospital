@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Atención de paciente</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      h1 {
+      font-weight: 400;
+      }
+      h4 {
+      margin: 22px 0 4px;
+      color: #095484;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 3px;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px #ccc; 
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      vertical-align: middle;
+      }
+      input:hover, textarea:hover {
+      outline: none;
+      border: 1px solid #095484;
+      }
+      .first-name {
+      margin-bottom: 22px;
+      }
+      span {
+      color: red;
+      }
+      th, td {
+      width: 21%;
+      padding: 15px 0;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+      vertical-align: unset;
+      line-height: 18px;
+      font-weight: 400;
+      word-break: break-all;
+      }
+      .first-col {
+      width: 16%;
+      text-align: left;
+      }
+      table {
+      width: 100%;
+      }
+      textarea {
+      width: calc(100% - 6px);
+      }
+      .btn-block {
+      margin-top: 20px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      -webkit-border-radius: 5px; 
+      -moz-border-radius: 5px; 
+      border-radius: 5px; 
+      background-color: #095484;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background-color: #0666a3;
+      }
+      @media (min-width: 568px) {
+      th, td {
+      word-break: keep-all;
+      }
+      }
+    </style>
+    <head>
+        <title>Horario de citas</title>
+        </head>
+        <body>
+        <h1 align="center">Horario de atención </h1>
+        
+            <table align=left border="1
+            " bordercolor="#0666a3"
+            cellpadding="4" cellspacing="10">
+              <tr>
+                <th bgcolor="#0666a3">Hora</th><th>Lunes</th><th>Martes</th><th>Miercoles</th>
+        <th>Jueves</th><th>Viernes</th><th>sabado</th>
+        </tr>
+        <tr>
+        <td>6:00 am </td>
+        </tr>
+        <tr>
+        <td>7:30 am </td>
+        </tr>
+        <tr>
+        <td>8:00 am </td>
+        </tr>
+        <tr>
+        <td>8:30 am </td>
+        </tr>
+        <tr>
+        <td>9:00 am </td>
+        </tr>
+        <tr>
+        <td>9:30 am </td>
+        </tr>
+        <tr>
+        <td>10:00 am </td>
+        </tr>
+        <tr>
+        <td>10:30 am </td>
+        </tr>
+        <tr>
+        <td>11:00 am </td>
+        </tr>
+        <tr>
+        <td>11:30 am </td>
+        </tr>
+        <tr>
+        <td>12:00 pm </td>
+        </tr>
+        <tr>
+        <td>12:30 pm </td>
+        </tr>
+        <tr>
+        <td>1:00 pm </td>
+        </tr>
+        <tr>
+        <td>1:30 pm </td>
+        </tr>
+        <tr>
+        </table>
+        </body>
+  </head>
+  <body>
+    <div class="testbox">
+      <form action="/">
+        <h1>Atención de paciente</h1>
+        <h1>Historia clinica</h1>
+        <h4>N° Historia clinica</h4>
+        <input class="IDhistoriaClinica" type="text" name="N° HistoriaClinica" placeholder="ID" />
+        <div class="btn-block">
+            <button type="submit" href="/">consultar</button>
+          </div>
+       
+        <fieldset>
+            <legend>Informacion de consulta</legend>
+            <div class="item">
+              <label for="date">Fecha<span>*</span></label>
+              <input id="date" type="date" name="date" required/>
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <div class="item">
+              <p>Hora</p>
+              <select>
+                <option selected value="" disabled selected></option>
+                <option value="am" >Mañana</option>
+                <option value="pm">Tarde</option>
+            <input class="Horaconsulta" type="text" name="Hora" placeholder="00:00" />
+              </select>
+            </div>
+            <div class="question">
+              <label>Motivo de la consulta</label>
+              <div class="question-answer">
+                <div>
+                  <input type="radio" value="none" id="radio_1" name="consulta"/>
+                  <label for="radio_1" class="radio"><span>Enfermedad general</span></label>
+                </div>
+                <div>
+                  <input  type="radio" value="none" id="radio_3" name="physician"/>
+                  <label for="radio_3" class="radio"><span>Cita prioritaria</span></label>
+                </div>
+                <div>
+                  <input  type="radio" value="none" id="radio_4" name="physician"/>
+                  <label for="radio_4" class="radio"><span>Urgencias</span></label>
+                </div>
+                <div>
+                  <input  type="radio" value="none" id="radio_5" name="physician"/>
+                  <label for="radio_5" class="radio"><span>Chekeo general</span></label>
+                </div>
+                <div>
+                  <input  type="radio" value="none" id="radio_6" name="physician"/>
+                  <label for="radio_6" class="radio"><span>otros</span></label>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <label for="instructions">Por favor, describa el motivo de esta consulta </label>
+              <textarea id="instructions" rows="3"></textarea>
+            </div>
+            <table>
+                <tr>
+                  <th class="first-col"></th>
+                  <th>Muy grave</th>
+                  <th>Grave</th>
+                  <th>Relevante </th>
+                  <th>Irrelevante</th>
+                </tr>
+                <tr>
+                  <td class="first-col">sintoma  #1</td>
+                  <td><input type="radio" value="none" name="point#1" /></td>
+                  <td><input type="radio" value="none" name="point#1” /></td>
+                  <td><input type="radio" value="none" name="point#1" /></td>
+                  <td><input type="radio" value="none" name="point#1" /></td>
+                </tr>
+                <tr>
+                  <td class="first-col">sintoma #2</td>
+                  <td><input type="radio" value="none" name="point#2" /></td>
+                  <td><input type="radio" value="none" name="point#2" /></td>
+                  <td><input type="radio" value="none" name="point#2" /></td>
+                  <td><input type="radio" value="none" name="point#2" /></td>
+                </tr>
+                <tr>
+                  <td class="first-col">sintoma #3</td>
+                  <td><input type="radio" value="none" name="point#3" /></td>
+                  <td><input type="radio" value="none" name="point#3" /></td>
+                  <td><input type="radio" value="none" name="point#3" /></td>
+                  <td><input type="radio" value="none" name="point#3" /></td>
+                </tr>
+                <tr>
+                  <td class="first-col">sintoma #4</td>
+                  <td><input type="radio" value="none" name="point#4" /></td>
+                  <td><input type="radio" value="none" name="point#4" /></td>
+                  <td><input type="radio" value="none" name="point#4" /></td>
+                  <td><input type="radio" value="none" name="point#4" /></td>
+                </tr>
+                <tr>
+                  <td class="first-col">sintoma #5</td>
+                  <td><input type="radio" value="none" name="point#5" /></td>
+                  <td><input type="radio" value="none" name="point#5" /></td>
+                  <td><input type="radio" value="none" name="point#5" /></td>
+                  <td><input type="radio" value="none" name="point#5" /></td>
+                </tr>
+              </table>
+              <h4>Receta medica/ Medicamentos y examenes:</h4>
+              <textarea rows="5"></textarea>
+          </fieldset>
+    
+
+        <div class="btn-block">
+          <button type="submit" href="/">Modificar historia clinica</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
